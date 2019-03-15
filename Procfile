@@ -1,1 +1,0 @@
-web: gunicorn hello_world_django.wsgi --log-file -s
