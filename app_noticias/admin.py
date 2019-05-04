@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Noticia
 from .models import Pessoa
 from .models import Tag
+from .models import MensagemDeContato
 
 @admin.register(Noticia)
 class NoticiaAdmin(admin.ModelAdmin):
@@ -14,3 +15,7 @@ class PessoaAdmin(admin.ModelAdmin):
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(MensagemDeContato)
+class MensagemDeContatoAdmin(admin.ModelAdmin):
+    readonly_fields = ('data',)
